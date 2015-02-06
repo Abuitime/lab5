@@ -1,9 +1,18 @@
 'use strict';
 
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$('div.friend h2 a').click(function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		$this.text(anagrammedName($this.text()));
+	});
 })
+
+
+
 
 /*
  * Function that is called when the document is ready.
